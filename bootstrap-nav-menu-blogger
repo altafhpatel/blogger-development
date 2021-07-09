@@ -22,3 +22,32 @@
     </b:includable>
   </b:defaultmarkup>
 </b:defaultmarkups>
+
+
+<!-------------------- if you have created a section for your widget then use the below code -->
+<!-------------------- don't know what to do use above -->
+
+<b:defaultmarkup type='PageList'>
+       	<b:includable id='main'>
+          <b:if cond='data:widget.sectionId == &quot;main_navigation&quot;'>
+              <b:if cond='data:title != &quot;&quot;'/>
+                <nav class='navbar navbar-expand-lg navbar-light bg-light'>
+                  <a class='navbar-brand' href='#'>Navbar</a>
+                  <button aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation' class='navbar-toggler' data-target='#navbarNav' data-toggle='collapse' type='button'>
+                    <span class='navbar-toggler-icon'/>
+                  </button>
+                  <div class='collapse navbar-collapse' id='navbarNav'>
+                    <ul class='navbar-nav'>
+                      <b:loop values='data:links' var='link'>
+                        <b:if cond='data:link.isCurrentPage'>
+                          <li class='nav-item'><a class='active nav-link' expr:href='data:link.href'><data:link.title/></a></li>
+                        <b:else/>
+                          <li class='nav-item'><a class='nav-link' expr:href='data:link.href'><data:link.title/></a></li>
+                        </b:if>
+                      </b:loop>
+                    </ul>
+                  </div>
+                  </nav>
+          	</b:if>
+          </b:includable>
+      </b:defaultmarkup>
