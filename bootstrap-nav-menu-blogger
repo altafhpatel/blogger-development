@@ -1,3 +1,20 @@
+<!-- 
+  --------------------------
+  Step:1 ---> Create a section in your blogger template with the below code 
+  -------------------------- 
+-->
+
+<b:section class='main_navigation' id='main_navigation' showaddelement='false'>
+<b:widget id='PageList1' locked='true' title='Pages' type='PageList' visible='true' /> 
+</b:section>
+
+
+<!-- 
+  --------------------------
+  Step:2 ----> To make the menu like bootstrap 4  paste the markeup above </head> 
+  -------------------------- 
+-->
+
 <b:defaultmarkups>
   <b:defaultmarkup type='PageList'>
     <b:includable id='main'>
